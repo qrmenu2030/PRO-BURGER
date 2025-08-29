@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRO BURGER - Меню</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            line-height: 1.5;
+            padding: 10px;
+            max-width: 100%;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: linear-gradient(to right, #ffcc00, #ff9900);
+            border-radius: 8px;
+            color: #1a1a1a;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 3px;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* Навигация */
+        .categories-nav {
+            display: flex;
+            overflow-x: auto;
+            background: #2a2a2a;
+            border-radius: 8px;
+            padding: 8px;
+            gap: 10px;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .categories-nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: #1a1a1a;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .categories-nav a:hover {
+            background: #ffcc00;
+            color: #1a1a1a;
+        }
+
+        .category {
+            margin-bottom: 25px;
+        }
+
+        .category-title {
+            color: #ffcc00;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #ffcc00;
+        }
+
+        .category-title span {
+            margin-right: 8px;
+        }
+
+        .menu-list {
+            list-style: none;
+        }
+
+        .menu-list li {
+            background-color: #2a2a2a;
+            margin-bottom: 8px;
+            padding: 8px 10px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.2s;
+        }
+
+        .menu-list li:hover {
+            background-color: #3a3a3a;
+            transform: scale(1.02);
+        }
+
+        .item-img {
+            width: 55px;
+            height: 55px;
+            border-radius: 6px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .item-name {
+            text-align: left;
+            font-size: 0.9rem;
+            flex: 1;
+        }
+
+        .item-price {
+            background: #ffcc00;
+            color: #1a1a1a;
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            white-space: nowrap;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 12px;
+            color: #ffcc00;
+            font-size: 0.75rem;
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .tagline {
+                font-size: 1.2rem;
+            }
+            .category-title {
+                font-size: 1.6rem;
+            }
+            .item-name {
+                font-size: 1rem;
+            }
+            .item-price {
+                font-size: 1.1rem;
+            }
+            .item-img {
+                width: 65px;
+                height: 65px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PRO BURGER</h1>
+            <div class="tagline">« Профессиональный бургер »</div>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="categories-nav">
+            <a href="#burgers">🍔 Бургеры</a>
+            <a href="#pizza">🍕 Пицца</a>
+            <a href="#hotdog-beef">🌭 Хот-доги (говядина)</a>
+            <a href="#hotdog-chicken">🐔 Хот-доги (курица)</a>
+            <a href="#burrito">🌯 Буррито</a>
+            <a href="#snacks">🍗 Закуски</a>
+            <a href="#drinks">🥤 Напитки</a>
+        </nav>
+
+        <!-- Бургеры -->
+        <div class="category" id="burgers">
+            <h2 class="category-title"><span>🍔</span>Бургеры</h2>
+            <ul class="menu-list">
+                <li><img src="img/Bg1.jpg" class="item-img"><span class="item-name">Pro бургер</span><span class="item-price">27 c</span></li>
+                <li><img src="img/Bg2.jpg" class="item-img"><span class="item-name">Big бургер XL</span><span class="item-price">29 c</span></li>
+                <li><img src="img/Bg3.jpg" class="item-img"><span class="item-name">Big бургер XXL</span><span class="item-price">39 c</span></li>
+                <li><img src="img/Bg4.jpg" class="item-img"><span class="item-name">Чизбургер</span><span class="item-price">24 c</span></li>
+                <li><img src="img/Bg5.jpg" class="item-img"><span class="item-name">Куриный бургер</span><span class="item-price">20 c</span></li>
+                <li><img src="img/Bg6.jpg" class="item-img"><span class="item-name">Бургер & Фри</span><span class="item-price">26 c</span></li>
+                <li><img src="img/Bg7.jpg" class="item-img"><span class="item-name">Гамбургер</span><span class="item-price">20 c</span></li>
+            </ul>
+        </div>
+
+        <!-- Пицца -->
+        <div class="category" id="pizza">
+            <h2 class="category-title"><span>🍕</span>Пицца</h2>
+            <ul class="menu-list">
+                <li><img src="img/P1.jpg" class="item-img"><span class="item-name">Маргарита</span><span class="item-price">40 c</span></li>
+                <li><img src="img/P2.jpg" class="item-img"><span class="item-name">Пепперони</span><span class="item-price">40 c</span></li>
+                <li><img src="img/P3.jpg" class="item-img"><span class="item-name">Четыре сезона</span><span class="item-price">60 c</span></li>
+                <li><img src="img/P4.jpg" class="item-img"><span class="item-name">Четыре сыра</span><span class="item-price">50 c</span></li>
+                <li><img src="img/P5.jpg" class="item-img"><span class="item-name">Барбекю</span><span class="item-price">55 c</span></li>
+            </ul>
+        </div>
+
+        <!-- Хот-доги (говядина) -->
+        <div class="category" id="hotdog-beef">
+            <h2 class="category-title"><span>🌭</span>Хот-доги (говядина)</h2>
+            <ul class="menu-list">
+                <li><img src="img/hd1.jpg" class="item-img"><span class="item-name">Турецкий</span><span class="item-price">16 c</span></li>
+                <li><img src="img/hd2.jpg" class="item-img"><span class="item-name">Köfte</span><span class="item-price">20 c</span></li>
+                <li><img src="img/hd3.jpg" class="item-img"><span class="item-name">Королевский</span><span class="item-price">16 c</span></li>
+                <li><img src="img/hd4.jpg" class="item-img"><span class="item-name">Тайский</span><span class="item-price">15 c</span></li>
+            </ul>
+        </div>
+
+        <!-- Хот-доги (курица) -->
+        <div class="category" id="hotdog-chicken">
+            <h2 class="category-title"><span>🍗</span>Хот-доги (курица)</h2>
+            <ul class="menu-list">
+                <li><img src="img/hd5.jpg" class="item-img"><span class="item-name">Французский</span><span class="item-price">14 c</span></li>
+                <li><img src="img/hd6.jpg" class="item-img"><span class="item-name">С сыром</span><span class="item-price">14 c</span></li>
+                <li><img src="img/hd7.jpg" class="item-img"><span class="item-name">Сальса</span><span class="item-price">14 c</span></li>
+                <li><img src="img/hd8.jpg" class="item-img"><span class="item-name">Чикен</span><span class="item-price">12 c</span></li>
+            </ul>
+        </div>
+
+        <!-- Буррито -->
+        <div class="category" id="burrito">
+            <h2 class="category-title"><span>🌯</span>Буррито</h2>
+            <ul class="menu-list">
+                <li><img src="img/Bu1.jpg" class="item-img"><span class="item-name">Pro буррито</span><span class="item-price">30 c</span></li>
+                <li><img src="img/Bu2.jpg" class="item-img"><span class="item-name">С соусом аджи (XL)</span><span class="item-price">25 c</span></li>
+                <li><img src="img/Bu3.jpg" class="item-img"><span class="item-name">С соусом аджи (XXL)</span><span class="item-price">30 c</span></li>
+                <li><img src="img/Bu4.jpg" class="item-img"><span class="item-name">С картофелем фри</span><span class="item-price">18 c</span></li>
+            </ul>
+        </div>
+
+        <!-- Закуски -->
+        <div class="category" id="snacks">
+            <h2 class="category-title"><span>🍟</span>Закуски</h2>
+            <ul class="menu-list">
+                <li><img src="img/Kril.jpg" class="item-img"><span class="item-name">Крылышки (5 шт.)</span><span class="item-price">22 c</span></li>
+                <li><img src="img/Ng.jpg" class="item-img"><span class="item-name">Наггетсы (200 г)</span><span class="item-price">20 c</span></li>
+                <li><img src="img/Free.jpg" class="item-img"><span class="item-name">Картофель фри</span><span class="item-price">15 c</span></li>
+            </ul>
+        </div>
+
+        <!-- Напитки -->
+        <div class="category" id="drinks">
+            <h2 class="category-title"><span>🥤</span>Напитки</h2>
+            <ul class="menu-list">
+                <li><img src="img/rc.jpeg" class="item-img"><span class="item-name">RC Cola  (0.330)</span><span class="item-price">7 c</span></li> 
+                <li><img src="img/Juicy.jpg" class="item-img"><span class="item-name">Сок "Нури Зулол" (250 мл)</span><span class="item-price">5 c</span></li>
+                <li><img src="img/coffee.jpg" class="item-img"><span class="item-name">Кофе</span><span class="item-price">3 c</span></li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>© 2025 PRO BURGER | Все права защищены</p>
+        </footer>
+    </div>
+</body>
+</html>
